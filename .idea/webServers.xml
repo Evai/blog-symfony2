@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="5a39e66e-c565-4b41-8bd6-6c2e6b78dc8e" name="localhost" url="http://127.0.0.1:8000/app_dev.php">
+        <fileTransfer host="127.0.0.1" port="21" username="Evai">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

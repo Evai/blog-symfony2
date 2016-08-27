@@ -1,0 +1,39 @@
+{% extends "base.html.twig" %}
+{% block title %}MyWebSite - {{ blogpost.subject.name }} - {{ blogpost.title }}{% endblock %}
+{% block body %}
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-xs-1"></div>
+            <div class="col-sm-6 col-xs-10">
+                <div class="row">
+                    <h1>{{ blogpost.title }}</h1>
+                </div>
+                <div class="row">
+                    <a class="btn btn-info btn-xs" href="{{ path('blog_list', {'subjectId':blogpost.subject.id}) }}">
+                        {{ blogpost.subject.name }}
+                    </a>
+                    <a class="btn btn-success btn-xs" href="{{ path('blog_list', {'subjectId':blogpost.subject.id}) }}">
+                        {{ blogpost.category.name }}
+                    </a>
+                    <small>发表于 {{ blogpost.createTimeStr }}</small>
+                </div>
+
+                <div class="row">
+                    <hr/>
+                </div>
+                <div class="row">
+                    <div class="row">
+                        <div class="col-sm-12 col-xs-12">
+                            <img style="width: 100%; height: 100%;" src="/uploads/media/default/0001/01/thumb_{{ blogpost.image.id }}_default_big.{{ blogpost.image.extension }}">
+                        </div>
+                    </div>
+                    <br/>
+                    {{ blogpost.body|raw }}
+                </div>
+            </div>
+            <div class="col-sm-3 col-xs-1"></div>
+        </div>
+    </div>
+
+{% endblock %}
